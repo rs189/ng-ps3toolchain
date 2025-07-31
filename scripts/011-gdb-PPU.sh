@@ -6,11 +6,11 @@ GDB="gdb-8.3.1"
 if [ ! -d ${GDB} ]; then
 
   ## Download the source code.
-  if [ ! -f ${GDB}.tar.xz ]; then wget --continue https://ftp.gnu.org/gnu/gdb/${GDB}.tar.xz; fi
+  if [ ! -f ${GDB}.tar.xz ]; then ${WGET:-wget -4} --continue https://ftp.gnu.org/gnu/gdb/${GDB}.tar.xz; fi
 
   ## Download an up-to-date config.guess and config.sub
-  if [ ! -f config.guess ]; then wget --continue https://git.savannah.gnu.org/cgit/config.git/plain/config.guess; fi
-  if [ ! -f config.sub ]; then wget --continue https://git.savannah.gnu.org/cgit/config.git/plain/config.sub; fi
+  if [ ! -f config.guess ]; then ${WGET:-wget -4} --continue https://git.savannah.gnu.org/cgit/config.git/plain/config.guess; fi
+  if [ ! -f config.sub ]; then ${WGET:-wget -4} --continue https://git.savannah.gnu.org/cgit/config.git/plain/config.sub; fi
 
   ## Unpack the source code.
   tar xfvJ ${GDB}.tar.xz

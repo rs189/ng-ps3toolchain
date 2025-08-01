@@ -1,0 +1,12 @@
+diff -ruN gcc-7.2.0/contrib/download_prerequisites ../b/gcc-7.2.0/contrib/download_prerequisites
+--- gcc-7.2.0/contrib/download_prerequisites	2017-04-11 13:34:07.637265000 -0300
++++ ../b/gcc-7.2.0/contrib/download_prerequisites	2025-08-01 16:37:45.547380058 -0300
+@@ -32,7 +32,7 @@
+ mpc='mpc-1.0.3.tar.gz'
+ isl='isl-0.16.1.tar.bz2'
+ 
+-base_url='ftp://gcc.gnu.org/pub/gcc/infrastructure/'
++base_url='https://gcc.gnu.org/pub/gcc/infrastructure/'
+ 
+ echo_archives() {
+     echo "${gmp}"
